@@ -4,14 +4,7 @@ from datetime import date, timedelta
 import json
 from pathlib import Path
 
-# ============================================================
-# HABIT TRACKER
-# Single-file Python project
-# ============================================================
-
 DATA_FILE = Path("habits.json")
-
-# ---------------- DATA HANDLING ----------------
 
 def load_data():
     if DATA_FILE.exists():
@@ -34,9 +27,6 @@ def save_data():
 
 def today():
     return date.today().isoformat()
-
-
-# ---------------- HABIT CALCULATIONS ----------------
 
 def current_streak(completed_dates):
     dates = set(completed_dates)
@@ -89,9 +79,6 @@ def completion_percentage(habit):
 
     return round((completed / days) * 100)
 
-
-# ---------------- COLORS ----------------
-
 BG = "#10141C"
 CARD = "#1A202B"
 CARD2 = "#232B38"
@@ -104,9 +91,6 @@ GREEN = "#35C98A"
 RED = "#F05D72"
 ORANGE = "#F5A742"
 
-
-# ---------------- MAIN WINDOW ----------------
-
 root = tk.Tk()
 
 root.title("Habit Tracker")
@@ -114,9 +98,6 @@ root.geometry("950x650")
 root.minsize(800, 550)
 
 root.configure(bg=BG)
-
-
-# ---------------- HEADER ----------------
 
 header = tk.Frame(root, bg=BG)
 header.pack(fill="x", padx=25, pady=(20, 10))
@@ -154,9 +135,6 @@ def update_date():
 
 update_date()
 
-
-# ---------------- MAIN LAYOUT ----------------
-
 content = tk.Frame(root, bg=BG)
 content.pack(
     fill="both",
@@ -192,9 +170,6 @@ main.pack(
     expand=True
 )
 
-
-# ---------------- BUTTON FUNCTION ----------------
-
 def create_button(parent, text, command, color=BLUE):
 
     return tk.Button(
@@ -213,18 +188,10 @@ def create_button(parent, text, command, color=BLUE):
         pady=9
     )
 
-
-# ---------------- CLEAR MAIN ----------------
-
 def clear_main():
 
     for widget in main.winfo_children():
         widget.destroy()
-
-
-# ============================================================
-# DASHBOARD
-# ============================================================
 
 def show_dashboard():
 
@@ -269,8 +236,6 @@ def show_dashboard():
         pady=(0, 15)
     )
 
-
-    # -------- STAT CARDS --------
 
     stats = tk.Frame(main, bg=BG)
     stats.pack(fill="x")
@@ -325,9 +290,6 @@ def show_dashboard():
             anchor="w",
             padx=15
         )
-
-
-    # -------- TODAY'S HABITS --------
 
     section = tk.Frame(
         main,
@@ -417,11 +379,6 @@ def show_dashboard():
             pady=6
         )
 
-
-# ============================================================
-# ADD HABIT
-# ============================================================
-
 def add_habit():
 
     name = simpledialog.askstring(
@@ -463,11 +420,6 @@ def add_habit():
 
     show_dashboard()
 
-
-# ============================================================
-# DELETE HABIT
-# ============================================================
-
 def delete_habit():
 
     name = selected_habit.get()
@@ -498,11 +450,6 @@ def delete_habit():
 
         show_dashboard()
 
-
-# ============================================================
-# MARK HABIT DONE / UNDO
-# ============================================================
-
 def toggle_habit(name):
 
     habit = data["habits"][name]
@@ -522,11 +469,6 @@ def toggle_habit(name):
     save_data()
 
     show_dashboard()
-
-
-# ============================================================
-# MY HABITS
-# ============================================================
 
 def show_habits():
 
@@ -633,10 +575,6 @@ def show_habits():
         )
 
 
-# ============================================================
-# SELECT HABIT
-# ============================================================
-
 selected_habit = tk.StringVar()
 
 
@@ -645,11 +583,6 @@ def select_habit(name):
     selected_habit.set(name)
 
     show_history()
-
-
-# ============================================================
-# HISTORY
-# ============================================================
 
 def show_history():
 
@@ -688,9 +621,6 @@ def show_history():
 
 
     habit = data["habits"][name]
-
-
-    # -------- SUMMARY --------
 
     summary = tk.Frame(
         main,
@@ -745,9 +675,6 @@ def show_history():
             fg=WHITE,
             font=("Arial", 12, "bold")
         ).pack(pady=4)
-
-
-    # -------- LAST 30 DAYS --------
 
     history = tk.Frame(
         main,
@@ -822,11 +749,6 @@ def show_history():
             padx=12
         )
 
-
-# ============================================================
-# ABOUT
-# ============================================================
-
 def show_about():
 
     clear_main()
@@ -897,11 +819,6 @@ Python concepts used:
         padx=30,
         pady=30
     )
-
-
-# ============================================================
-# SIDEBAR
-# ============================================================
 
 tk.Label(
     sidebar,
@@ -1007,11 +924,6 @@ tk.Label(
     side="bottom",
     pady=15
 )
-
-
-# ============================================================
-# START APPLICATION
-# ============================================================
 
 show_dashboard()
 
