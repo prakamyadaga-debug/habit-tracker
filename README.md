@@ -193,63 +193,8 @@ The following test cases can be used to verify that the application works correc
 8. Verify that the remaining habit data has been saved correctly.
 9. Test invalid inputs such as an empty habit name.
 10. Confirm that the application does not crash.
-
----
-
-## 9. Screenshots
-
-Screenshots are recommended for documenting the project.
-
-Add screenshots such as:
-
-### Main Interface
-
-```text
-screenshots/main-interface.png
-```
-
-Show the main Habit Tracker window containing the habit list and available controls.
-
-### Adding a Habit
-
-```text
-screenshots/add-habit.png
-```
-
-Show the interface while adding a new habit.
-
-### Completed Habit
-
-```text
-screenshots/completed-habit.png
-```
-
-Show a habit after it has been marked as completed.
-
-### Project Screenshots Folder
-
-```text
-Habit-Tracker/
-│
-├── habit_tracker.py
-├── habits.json
-├── README.md
-│
-└── screenshots/
-    ├── main-interface.png
-    ├── add-habit.png
-    └── completed-habit.png
-```
-
-To display an image in GitHub README:
-
-```markdown
-![Habit Tracker Main Interface](screenshots/main-interface.png)
-```
-
----
-
-## 10. Expected Result
+    
+## 09. Expected Result
 
 After successfully running the program, a graphical Habit Tracker window should appear.
 
@@ -264,7 +209,7 @@ The user should be able to:
 
 ---
 
-## 11. Learning Outcomes
+## 10. Learning Outcomes
 
 Through this project, the following concepts are practiced:
 
@@ -281,7 +226,7 @@ Through this project, the following concepts are practiced:
 
 ---
 
-## 12. Author
+## 11. Author
 
 **Ritisha Daga**
 
@@ -289,6 +234,6 @@ B.Tech CSE (Computing & Data Science)
 
 ---
 
-## 13. License
+## 12. License
 
 This project is developed for **educational and academic purposes**.
