@@ -2,7 +2,7 @@
 
 ## 1. Project Title
 
-**Python Habit Tracker**
+**Habit Tracker**
 
 A simple desktop application developed in Python to help users create, manage, and track their daily habits.
 
@@ -10,7 +10,7 @@ A simple desktop application developed in Python to help users create, manage, a
 
 ## 2. Project Overview
 
-The **Python Habit Tracker** is a graphical desktop application that allows users to maintain a list of personal habits and track their daily progress.
+The **Habit Tracker** is a graphical desktop application that allows users to maintain a list of personal habits and track their daily progress.
 
 The application provides an easy-to-use interface where users can add new habits, mark habits as completed, view their current progress, and remove habits when they are no longer required.
 
