@@ -228,9 +228,9 @@ Through this project, the following concepts are practiced:
 
 ## 11. Author
 
-**Ritisha Daga**
+**Ritisha Daga (26MIP10074)**
 
-B.Tech CSE (Computing & Data Science)
+Integrated M.tech in CSE (Computing & Data Science)
 
 ---
 
