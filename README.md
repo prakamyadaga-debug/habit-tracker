@@ -1,4 +1,4 @@
-# Python Habit Tracker
+# Habit Tracker
 
 ## 1. Project Title
 
