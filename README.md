@@ -205,8 +205,8 @@ Added a folder of screenshots
 6. Picture 6
 7. Picture 7
 
-Path is screenshots
-
+Path is Screenshots [screenshots
+](https://github.com/prakamyadaga-debug/habit-tracker/tree/26bd6452b6cdd5ab01e48e5758cf04ef052525f0/screenshots)
     
 ## 09. Expected Result
 
