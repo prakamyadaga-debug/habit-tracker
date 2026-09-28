@@ -205,6 +205,8 @@ Added a folder of screenshots
 6. Picture 6
 7. Picture 7
 
+Path is screenshots
+
     
 ## 09. Expected Result
 
