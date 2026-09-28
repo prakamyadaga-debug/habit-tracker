@@ -193,6 +193,18 @@ The following test cases can be used to verify that the application works correc
 8. Verify that the remaining habit data has been saved correctly.
 9. Test invalid inputs such as an empty habit name.
 10. Confirm that the application does not crash.
+
+## 10. Screenshots 
+Added a folder of screenshots 
+
+1. Picture 1
+2. Picture 2
+3. Picture 3
+4. Picture 4
+5. Picture 5
+6. Picture 6
+7. Picture 7
+
     
 ## 09. Expected Result
 
