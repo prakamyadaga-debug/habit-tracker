@@ -87,7 +87,7 @@ Habit-Tracker/
 ├── habits.json
 └── README.md
 ```
-
+> 'habit_tracker.py' contains all the modules.
 > `habits.json` may be created automatically when the application is first executed.
 
 ---
