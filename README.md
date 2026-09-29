@@ -1,35 +1,65 @@
-# Habit Tracker
+Habit Tracker
 
-A modular desktop Habit Tracker developed in Python using Tkinter and JSON.
+Project Overview
 
-## Features
+Habit Tracker is a Python-based desktop application designed to help users create, manage, and track their daily habits.
 
-- Add, edit and delete habits
-- Mark habits complete for the current day
-- Undo today's completion
-- Persistent JSON data storage
-- Current streak calculation
-- Longest streak calculation
-- Daily completion percentage
-- Seven-day statistics
-- Habit-wise performance statistics
+The application allows users to add, edit, delete, and complete habits while maintaining completion history. It also calculates current and longest streaks and provides basic statistics to help users monitor their consistency.
+
+The project uses a simple graphical user interface and stores data locally using a JSON file.
+
+---
+
+Features
+
+- Add new habits
+- Edit existing habits
+- Delete habits
+- Add habit descriptions
+- Mark habits as completed
+- Undo habit completion
+- Track completion history
+- Calculate current streaks
+- Calculate longest streaks
+- Display today's completion percentage
+- Display total habits
+- Display completed habits for today
+- View seven-day statistics
+- View habit-wise performance
+- Store data permanently in JSON
 - Input validation
-- Modular project architecture
+- Duplicate habit prevention
 - User-friendly graphical interface
 
-## Technology Stack
+---
+
+Technologies / Tools Used
 
 - Python 3.10+
-- Tkinter
-- JSON
-- Object-oriented programming
-- File handling
-- Date/time processing
+- Tkinter – Graphical User Interface
+- JSON – Local data storage
+- VS Code – Development environment
+- Git & GitHub – Version control and project repository
 
-## Project Structure
+Python Libraries
 
-```text
+The project uses Python's built-in libraries:
+
+- "tkinter"
+- "datetime"
+- "json"
+- "pathlib"
+- "dataclasses"
+- "typing"
+
+No external Python packages are required.
+
+---
+
+Project Structure
+
 HabitTracker/
+│
 ├── main.py
 ├── config.py
 ├── models.py
@@ -39,115 +69,221 @@ HabitTracker/
 ├── validators.py
 ├── ui.py
 ├── utils.py
+│
 ├── data/
 │   └── habits.json
+│
 ├── screenshots/
+│
 ├── README.md
 ├── statement.md
 └── requirements.txt
-```
 
-## How to Run
+File Description
 
-1. Install Python 3.10 or newer.
-2. Open this folder in VS Code.
-3. Open the VS Code terminal.
-4. Run:
+File| Description
+"main.py"| Starts the application
+"config.py"| Contains application configuration
+"models.py"| Defines the Habit data model
+"storage.py"| Handles JSON data storage
+"habit_manager.py"| Handles habit operations
+"analytics.py"| Calculates statistics and streaks
+"validators.py"| Validates user input
+"ui.py"| Creates the Tkinter GUI
+"utils.py"| Contains date and utility functions
+"habits.json"| Stores habit data
 
-```bash
+---
+
+Installation & Run
+
+1. Install Python
+
+Install Python 3.10 or later.
+
+Check the installed version:
+
+python --version
+
+---
+
+2. Clone the Repository
+
+Clone this repository using:
+
+git clone <YOUR-GITHUB-REPOSITORY-URL>
+
+Then open the project folder:
+
+cd HabitTracker
+
+---
+
+3. Open in VS Code
+
+Open the "HabitTracker" folder in Visual Studio Code.
+
+---
+
+4. Run the Application
+
+Open the VS Code terminal and run:
+
 python main.py
-```
 
-On some systems use:
+If your system uses "python3", run:
 
-```bash
 python3 main.py
-```
 
-## Data Storage
+The Habit Tracker application will open.
 
-Habit information is stored locally in:
+---
 
-```text
+How to Use
+
+Add a Habit
+
+1. Click Add Habit.
+2. Enter the habit name.
+3. Enter an optional description.
+4. Click Save.
+
+Edit a Habit
+
+1. Select a habit.
+2. Click Edit Habit.
+3. Update the information.
+4. Click Save.
+
+Complete a Habit
+
+1. Select a habit.
+2. Click Mark Complete / Undo.
+3. The habit will be marked as completed for the current day.
+
+Undo Completion
+
+Select the completed habit and click Mark Complete / Undo again.
+
+Delete a Habit
+
+1. Select a habit.
+2. Click Delete Habit.
+3. Confirm the deletion.
+
+View Statistics
+
+Click Statistics to view:
+
+- Total completions
+- Seven-day completion data
+- Completion percentage
+- Current streak
+- Longest streak
+- Habit-wise performance
+
+---
+
+Testing Instructions
+
+The following tests should be performed before submission.
+
+Test Case| Action| Expected Result
+Add Habit| Add a valid habit| Habit appears in the list
+Edit Habit| Edit an existing habit| Updated information is displayed
+Delete Habit| Delete a selected habit| Habit is removed
+Complete Habit| Mark a habit complete| Status changes to "✓ Done"
+Undo Completion| Mark completed habit again| Status changes to "Pending"
+Empty Name| Try saving without a name| Validation message appears
+Duplicate Habit| Add an existing habit name| Duplicate is rejected
+Persistence| Close and reopen application| Saved data remains available
+Statistics| Open Statistics| Statistics are displayed
+Streak| Complete habits on consecutive days| Streak is calculated
+
+---
+
+Data Storage
+
+The application stores data locally in:
+
 data/habits.json
-```
 
-No internet connection or external database is required.
+The JSON file contains:
 
-## Functional Requirements
+- Habit ID
+- Habit name
+- Description
+- Creation date
+- Completion dates
 
-1. The user can create a habit.
-2. The user can edit a habit.
-3. The user can delete a habit.
-4. The user can mark a habit as completed.
-5. The user can undo today's completion.
-6. The system stores completion history.
-7. The system calculates current streaks.
-8. The system calculates longest streaks.
-9. The system displays daily completion statistics.
-10. The system displays seven-day statistics.
+Example:
 
-## Non-Functional Requirements
+[
+    {
+        "habit_id": 1,
+        "name": "Study Python",
+        "description": "Practice Python programming",
+        "created_date": "2026-09-29",
+        "completed_dates": [
+            "2026-09-29"
+        ]
+    }
+]
 
-1. Usability: the interface should be easy to understand.
-2. Reliability: data should persist between application sessions.
-3. Maintainability: functionality is separated into modules.
-4. Performance: normal operations should complete immediately for typical personal use.
-5. Validation: invalid habit names and duplicate names are rejected.
-6. Portability: the application uses standard Python libraries.
+---
 
-## Architecture
+Screenshots
 
-The project follows a simple layered architecture:
+Screenshots of the working application are included in the "screenshots/" folder.
 
-```text
-User
-  |
-  v
-Tkinter GUI (ui.py)
-  |
-  v
-Habit Manager (habit_manager.py)
-  |
-  +--> Validators (validators.py)
-  +--> Analytics (analytics.py)
-  +--> Models (models.py)
-  |
-  v
-Storage Layer (storage.py)
-  |
-  v
-JSON File (data/habits.json)
-```
+Recommended screenshots:
 
-## Academic Relevance
+01_dashboard.png
+02_add_habit.png
+03_habit_list.png
+04_mark_complete.png
+05_statistics.png
+06_data_validation.png
 
-The project demonstrates:
+---
 
-- Variables and data types
-- Lists and dictionaries
+Project Objective
+
+The objective of this project is to develop a simple and functional habit-tracking application while applying Python programming concepts such as:
+
 - Functions
 - Classes and objects
+- Lists and dictionaries
 - Conditional statements
 - Loops
 - File handling
-- JSON data processing
+- JSON processing
 - Exception handling
+- Input validation
 - Modular programming
-- GUI programming
-- Date/time operations
-- Basic algorithmic thinking
+- GUI development
+- Date and time processing
 
-## Testing Checklist
+---
 
-- [ ] Add a valid habit
-- [ ] Try adding an empty habit
-- [ ] Try adding a duplicate habit
-- [ ] Edit a habit
-- [ ] Delete a habit
-- [ ] Mark a habit complete
-- [ ] Undo completion
-- [ ] Close and reopen the application
-- [ ] Verify saved data
-- [ ] Check current and longest streak
-- [ ] Open statistics
+Future Enhancements
+
+Possible future improvements include:
+
+- Calendar-based habit tracking
+- Reminder notifications
+- Graphical charts
+- SQLite database integration
+- User accounts
+- Cloud synchronization
+- CSV/PDF report generation
+- Mobile application version
+
+---
+
+Author
+
+Ritisha Daga
+
+B.Tech CSE (Computing & Data Science)
+VIT Bhopal University
