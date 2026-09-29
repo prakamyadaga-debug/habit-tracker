@@ -83,11 +83,18 @@ The project demonstrates the practical use of **Python programming, Tkinter GUI 
 ```text
 Habit-Tracker/
 │
-├── habit_tracker.py
+├── main.py
+├── config.py
+├── data_manager.py
+├── habit_calculations.py
+├── ui_helpers.py
+├── dashboard.py
+├── habits.py
+├── history.py
+└── about.py
 ├── habits.json
 └── README.md
 ```
-> 'habit_tracker.py' contains all the modules.
 > `habits.json` may be created automatically when the application is first executed.
 
 ---
