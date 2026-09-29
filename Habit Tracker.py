@@ -6,7 +6,6 @@ from pathlib import Path
 
 # ============================================================
 # HABIT TRACKER
-# Single-file Python project
 # ============================================================
 
 DATA_FILE = Path("habits.json")
