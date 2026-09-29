@@ -88,7 +88,7 @@ Habit-Tracker/
 └── README.md
 ```
 
-> 'habit_tracker.py' have all the modules/classes 
+> `habit_tracker.py` have all the modules/classes.
 > `habits.json` may be created automatically when the application is first executed.
 
 ---
