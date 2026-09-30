@@ -195,7 +195,7 @@ The following test cases can be used to verify that the application works correc
 9. Test invalid inputs such as an empty habit name.
 10. Confirm that the application does not crash.
 
-## 10. Screenshots 
+## 09. Screenshots 
 Added a folder of screenshots 
 
 1. Picture 1
@@ -209,7 +209,7 @@ Added a folder of screenshots
 Path is Screenshots [screenshots
 ](https://github.com/prakamyadaga-debug/habit-tracker/tree/26bd6452b6cdd5ab01e48e5758cf04ef052525f0/screenshots)
     
-## 09. Expected Result
+## 10. Expected Result
 
 After successfully running the program, a graphical Habit Tracker window should appear.
 
@@ -221,23 +221,6 @@ The user should be able to:
 * Delete habits
 * Save habit data
 * Reload previously saved data
-
----
-
-## 10. Learning Outcomes
-
-Through this project, the following concepts are practiced:
-
-* Python GUI development using Tkinter
-* Functions and modular programming
-* Lists and dictionaries
-* File handling
-* JSON data storage
-* User input validation
-* Event-driven programming
-* Basic application design
-* Testing and debugging
-* GitHub project documentation
 
 ---
 
